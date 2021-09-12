@@ -37,7 +37,7 @@ var i = ""
 app.get("/", function (req, res) {
     Item.find({}, function (e, f) {
         //Condition for if item length is 0 then only add
-        if (f.length === 0) {
+        /**if (f.length === 0) {
             Item.insertMany(d, function (e) {
                 if (e) {
                     console.log("Error")
@@ -47,9 +47,9 @@ app.get("/", function (req, res) {
             });
             res.redirect("/");
         } else {
-            //else our items will get rendered
+            //else our items will get rendered**/
             res.render("list", { TodoItems: f });
-        }
+       // }
     })
 })
 
